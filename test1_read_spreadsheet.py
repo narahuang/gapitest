@@ -14,6 +14,10 @@ gc = gspread.authorize(credentials)
 
 # Open testing spreadsheet, URL: https://docs.google.com/spreadsheets/d/12vX2oVwUaBNUJX-OArExevASE9g--ZWKvHwtJnDGb0g/edit#gid=1084332676
 sh = gc.open("googleapitest1")
+# Or we can open it by URL
+#sh = gc.open_by_url("https://docs.google.com/spreadsheets/d/12vX2oVwUaBNUJX-OArExevASE9g--ZWKvHwtJnDGb0g/edit")
+
+# Select spreadsheet
 wks = sh.worksheet("vDT-Stella-Datong")
 cid = wks.acell('A29').value
 print cid
